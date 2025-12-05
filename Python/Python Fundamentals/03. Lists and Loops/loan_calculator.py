@@ -15,7 +15,7 @@ for i in range(months):
 
     # Check if the loan is paid off
     if(money_owned - payment < 0):
-        print(f"Last payment is: ${money_owned}")
+        print(f"Last payment is: ${money_owned:.2f}")
         print(f"You paid the loan in {i + 1} months")
         break
     
