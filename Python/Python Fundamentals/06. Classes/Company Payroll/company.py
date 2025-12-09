@@ -13,7 +13,7 @@ class Company:
     def print_employees(self):
         index = 1
         for employee in self.employees:
-            print(f"Employee {index}: {employee.first_name} {employee.last_name}, earning ${employee.salary}/month.")
+            print(f"Employee {index}: {employee.first_name} {employee.last_name}, earning ${employee.calculate_salary():.2f}/month.")
             index += 1
 
 def main():
@@ -21,9 +21,9 @@ def main():
     my_company = Company("BBC Top Gear")
     
     # Add employees
-    employee1 = Employee("Jeremy", "Clarkson", 50000)
-    employee2 = Employee("James", "May", 45000)
-    employee3 = Employee("Richard", "Hammond", 47500)
+    employee1 = Employee("Jeremy", "Clarkson", 51337)
+    employee2 = Employee("James", "May", 45676)
+    employee3 = Employee("Richard", "Hammond", 47528)
 
     # Hire employees
     my_company.add_employee(employee1)
