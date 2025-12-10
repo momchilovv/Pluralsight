@@ -1,4 +1,4 @@
-from employee import Employee
+from employee import CommissionEmployee, HourlyEmployee, SalaryEmployee
 
 # Create the company class
 class Company:
@@ -13,7 +13,7 @@ class Company:
     def print_employees(self):
         index = 1
         for employee in self.employees:
-            print(f"Employee {index}: {employee.first_name} {employee.last_name}, earning ${employee.calculate_salary():.2f}/month.")
+            print(f"Employee {index}: {employee.first_name} {employee.last_name}, earning ${employee.calculate_payment():.2f}.")
             index += 1
 
 def main():
@@ -21,9 +21,9 @@ def main():
     my_company = Company("BBC Top Gear")
     
     # Add employees
-    employee1 = Employee("Jeremy", "Clarkson", 51337)
-    employee2 = Employee("James", "May", 45676)
-    employee3 = Employee("Richard", "Hammond", 47528)
+    employee1 = SalaryEmployee("Jeremy", "Clarkson", 51337)
+    employee2 = HourlyEmployee("James", "May", 40, 37)
+    employee3 = CommissionEmployee("Richard", "Hammond", 5, 1560, 5)
 
     # Hire employees
     my_company.add_employee(employee1)
