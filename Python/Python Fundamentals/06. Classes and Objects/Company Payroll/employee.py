@@ -35,4 +35,4 @@ class CommissionEmployee(Employee):
 
     # Calculate comission payment
     def calculate_payment(self):
-        return self.deals_made * (self.deals_worth / self.commission)
+        return self.deals_made * self.deals_worth * (self.commission / 100)
