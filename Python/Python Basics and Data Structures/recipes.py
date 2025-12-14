@@ -3,14 +3,20 @@ recipes = [
         'name': 
             'Pancakes', 
         'ingredients': 
-        [
-            '1 cup flour',
-            '1 cup milk',
-            '1 egg',
-            '1 table spoon sugar',
-            'pinch of salf',
-            '1 table spoon baking powder'
-        ],
+        [{
+            'flour':
+                '1 cup',
+            'milk':
+                '1 cup',
+            'eggs':
+                '1',
+            'sugar':
+                '1 table spoon',
+            'salt':
+                '1 pinch',
+            'baking powder':
+                '1 tea spoon'
+        }],
         'instructions':
             'Mix all ingredients, pour batter on a hot pan, cook until bubbles form, flip and cook the other side.'
     },
