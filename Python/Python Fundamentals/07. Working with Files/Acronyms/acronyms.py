@@ -2,31 +2,48 @@ file_path = "software_acronyms.txt"
 
 def find_acronym(acronym):
     found = False
-    with open(file_path) as file:
-        for line in file:
-            if acronym in line.split('-')[0]:
-                found = True
-                return line
 
+    try:
+        with open(file_path) as file:
+            for line in file:
+                if acronym.strip().upper() == line.split('-')[0].strip().upper():
+                    found = True
+                    return line
+                
+    except FileNotFoundError:
+        print("File not found.")
+        return
+    
     if not found:
         print(f"{acronym} acronym was not found")
 
 def add_acronym(acronym, definition):
-    with open(file_path, "a") as file:
-        file.write(f"{acronym} - {definition}\n")
+    try:
+        with open(file_path, "a") as file:
+            file.write(f"{acronym} - {definition}\n")
+
+    except FileNotFoundError:
+        print("File not found.")
+        return
 
 def remove_acronym(acronym):
     found = False
 
-    with open(file_path) as file:
-        lines = file.readlines()
+    try:
+        with open(file_path) as file:
+            lines = file.readlines()
 
-    with open(file_path, "w") as file:
-        for line in lines:
-            if line.split('-')[0].strip() != acronym:
-                file.write(line)
-            else:
-                found = True
+        with open(file_path, "w") as file:
+            for line in lines:
+                if line.split('-')[0].strip().upper() != acronym.strip().upper():
+                    file.write(line)
+                else:
+                    found = True
+
+    except FileNotFoundError:
+        print("File not found.")
+        return
+
     if found:
         print(f"{acronym} was successfully removed from the list.")  
     else:
@@ -34,9 +51,9 @@ def remove_acronym(acronym):
 
 def print_acronym(acronym):
     try:
-        print(f"{acronym.split('-')[0]} - {acronym.split('-')[1]}")
-    except:
-        exit(0)
+        print(f"{acronym.split('-')[0].strip()} - {acronym.split('-')[1].strip()}")
+    except IndexError:
+        return
 
 def main():
     while True:
@@ -53,7 +70,9 @@ def main():
 
         elif key == 'f':
             acronym = input("Enter the acronym you want to find: ")
-            print(find_acronym(acronym))
+            result = find_acronym(acronym)
+            if result:
+                print_acronym(result)
 
         elif key == 'q':
             print(f"Exiting program.")
