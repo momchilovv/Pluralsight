@@ -24,12 +24,16 @@ recipes = [
         'name':
             'Scrambled Eggs',
         'ingredients':
-        [
-            '2 eggs',
-            '1 table spoon butter',
-            'salt',
-            'pepper'
-        ],
+        [{
+            'eggs':
+                '2',
+            'butter':
+                '1 table spoon',
+            'salt':
+                '1 pinch',
+            'pepper':
+                '1 pinch'
+        }],
         'instructions':
             'Beat eggs, melt butter in a pan, pour eggs, stir until cooked.'
     },
@@ -37,11 +41,14 @@ recipes = [
         'name':
             'Grilled Cheese Sandwich',
         'ingredients':
-        [
-            '2 slices of bread',
-            '2 slices of cheese',
-            'butter'
-        ],
+        [{
+            'bread':
+                '2 slices',
+            'cheese':
+                '2 slices',
+            'butter':
+                '1 slim slice'
+        }],
         'instructions':
             'Butter the bread, place cheese between slices, grill on pan until golden brown.'            
     },
@@ -49,12 +56,16 @@ recipes = [
         'name':
             'Fruit Salad',
         'ingredients':
-        [
-            '1 apple',
-            '1 banana',
-            '1 orange',
-            '1 table spoon honey'
-        ],
+        [{
+            'apple':
+                '1',
+            'banana':
+                '1',
+            'orange':
+                '1',
+            'honey':
+                '1 table spoon'
+        }],
         'instructions':
             'Chop all fruits, mix in a bowl, drizzle with honey.'
     },
@@ -62,12 +73,16 @@ recipes = [
         'name':
             'Spaghetti with Tomato Sauce',
         'ingredients':
-        [
-            '100g spaghetti',
-            '1/2 cup tomato sauce',
-            'salt',
-            'olive oil'
-        ],
+        [{
+            'spaghetti':
+                '100g',
+            'tomato sauce':
+                '1/2 cup',
+            'salt':
+                '1 pinch',
+            'olive oil':
+                '1 tea spoon'
+        }],
         'instructions':
             'Cook spaghetti, heat sauce, mix together, drizzle with olive oil.'
     },
@@ -75,12 +90,16 @@ recipes = [
         'name':
             'Oatmeal',
         'ingredients':
-        [
-            '1/2 cup oats',
-            '1 cup milk',
-            '1 tea spoon sugar',
-            'fruit'
-        ],
+        [{
+            'oats':
+                '1/2 cup',
+            'milk':
+                '1 cup',
+            'sugar':
+                '1 tea spoon',
+            'fruit':
+                '1'
+        }],
         'instructions':
             'Cook oats in milk, stir occasionally, top with fruit.'
     }
